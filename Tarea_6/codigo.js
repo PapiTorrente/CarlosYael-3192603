@@ -32,7 +32,12 @@ function agregarAlCarrito(index) {
 function agregarProducto() {
     var nombreP = prompt("Ingresa el nombre del producto que deseas agregar: ");
     var precioP = parseInt(prompt("Ingresa el precio de dicho producto: "));
-    productos.push({nombre: nombreP, precio: precioP});
+    if(nombreP != null && precioP != null){
+        productos.push({nombre: nombreP, precio: precioP});
+    } else {
+        alert("Ese no es un nombre ni precio adecuados, vuelve a intentarlo.");
+    }
+    
 }
 
 // Función para mostrar el carrito y el total
@@ -47,7 +52,7 @@ function mostrarCarritoYTotal() {
             total += carrito[i].precio;
         }
         mensajeCarrito += "\nTotal: $" + total;
-        console.log(mensajeCarrito);
+        alert(mensajeCarrito);
     }
 }
 
@@ -61,7 +66,7 @@ do {
 
     // Verificar si la opción es válida
     if (isNaN(opcion) || opcion < 1 || opcion > productos.length + 3) {
-        console.log("Opción no válida, por favor intenta de nuevo.");
+        alert("Opción no válida, por favor intenta de nuevo.");
     } else if (opcion >= 1 && opcion <= productos.length) {
         // Si la opción es válida y corresponde a un producto, agregar al carrito
         agregarAlCarrito(opcion - 1);
@@ -74,4 +79,4 @@ do {
     }
 } while (opcion !== productos.length + 3); // El bucle continúa hasta que elige "Salir"
 
-console.log("Gracias por visitar la tienda.");
+alert("Gracias por visitar la tienda.");
