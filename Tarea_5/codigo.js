@@ -35,7 +35,18 @@ function verTodasTareas() {
         let mensaje = "Lista de tareas: \n";
         tareas.forEach((tarea, index) => {
             mensaje+=`${index+1}.- ${tarea.nombre} [${tarea.completada? "Completada":"Pendiente"}]\n`; //Template strings, operador condicional termnario.
-        }); 
+        });
+        alert(mensaje); 
+    }
+}
+
+function marcarTareaCompletada(){
+    let numero = parseInt(prompt("Introduce el número de la tarea que quieres marcar como completada: "));
+    if(numero > 0 && numero <= tareas.length){
+        tareas[numero-1].completada = true;
+        alert(`La tarea "${tareas[numero-1].nombre}" ha sido completada con exito.`);
+    } else {
+        alert("No existe tarea en ese número proporcionado.");
     }
 }
 
