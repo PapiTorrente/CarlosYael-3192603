@@ -1,8 +1,9 @@
 let caracter = "";
+let cuadrado = "";
 let matrix = "";
 let direccion = prompt("Escribe '1' para imprimir en vertical, o escribe '0' para imprimir en horizontal");
 let equis = prompt("Ahora escribe cuantas x quieres que se impriman");
-let tamano = parseInt(equis);
+let tamano = parseInt(prompt("Indica el tamaño del que quieres que sea el cuadrado"));
 let frutas = ["Manzana", "Uva", "Pera", "Plátano", "Sandía", "Papaya", "Mora Azul"];
 
 imprimir(direccion, equis);
@@ -35,11 +36,11 @@ function imprimir(direccion, equis){
 function imprimirCuadrado(tamano){
     for(let vertical = 0; vertical < tamano; vertical++){
         for(let horizontal = 0; horizontal < tamano; horizontal++){
-            caracter += "X";
+            cuadrado += "X";
         }
-        caracter += "\n";
+        cuadrado += "\n";
     }
-    console.log(caracter);
+    console.log(cuadrado);
 }
 
 function tablas(){
