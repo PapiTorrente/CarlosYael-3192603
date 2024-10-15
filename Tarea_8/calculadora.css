@@ -1,0 +1,49 @@
+body {
+    display: flex;
+    justify-content: center;
+    font-family: 'Dosis',sans-serif;
+    font-display: swap;
+    background-color: rgb(155, 46, 64);
+}
+
+.Calc {
+    border-radius: 6px;
+    border: 2px solid rgb(255, 124, 146);
+    width: 288px;
+    padding: 20px;
+    display: inline-table;
+    justify-content: center;
+    background-color:pink;
+    box-shadow: 0 12px rgb(255, 124, 146);
+}
+
+input[type="text"] {
+    justify-content: right;
+    width: 280px;
+    height: 60px;
+    border-radius: 4px;
+    border: 2px solid rgb(255, 124, 146);
+    background-color: rgb(255, 223, 228);
+    box-shadow: 0 6px rgb(255, 124, 146);
+    color: rgb(255, 90, 118);
+    margin: 0px 0px 12px 0px;
+    font-size: 60px;
+    text-align: right;
+}
+
+input[type="button"] {
+    background-color: rgb(255, 156, 172);
+    border: solid rgb(255, 124, 146);
+    color: rgb(160, 26, 48);
+    width: 60px;
+    margin: 4px;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 42px;
+    box-shadow: 0 4px;
+    font-size: 20px;
+}
+
+input[value="0"] {
+    width: 133px;
+}

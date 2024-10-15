@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="calculadora.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,600;1,600&display=swap');
+        </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora UwU</title>
+</head>
+<body>
+        <div class="Calc">
+            <input type="text" name="pantalla" id="pantalla" disabled>
+            <br>
+            <input type="button" value="C" onclick="limpiarPantalla()">
+            <br>
+            <input type="button" value="1" onclick="agregarPantalla('1')">
+            <input type="button" value="2" onclick="agregarPantalla('2')">
+            <input type="button" value="3" onclick="agregarPantalla('3')">
+            <input type="button" value="+" onclick="agregarPantalla('+')">
+            <br>
+            <input type="button" value="4" onclick="agregarPantalla('4')">
+            <input type="button" value="5" onclick="agregarPantalla('5')">
+            <input type="button" value="6" onclick="agregarPantalla('6')">
+            <input type="button" value="-" onclick="agregarPantalla('-')">
+            <br>
+            <input type="button" value="7" onclick="agregarPantalla('7')">
+            <input type="button" value="8" onclick="agregarPantalla('8')">
+            <input type="button" value="9" onclick="agregarPantalla('9')">
+            <input type="button" value="*" onclick="agregarPantalla('*')">
+            <br>
+            <input type="button" value="0" onclick="agregarPantalla('0')">
+            <input type="button" value="=" onclick="igual()">
+            <input type="button" value="/" onclick="agregarPantalla('/')">
+        </div>
+
+<script src="calculadora.js"></script>
+</body>
+</html>
