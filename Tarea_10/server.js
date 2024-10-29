@@ -1,18 +1,12 @@
 const express = require('express');
-const router = express.Router();
 const path = require("path");
 
+const app = express();
+const port = 3006;
+const routes = require('./rutas');
 
-router.get('/',(req,res)=>{
-    res.sendFile(path.join(__dirname + "/inicio.html"));
+app.use('/',routes);
+
+app.listen(port,()=>{
+    console.log(console.log(`Servidor en: http://localhost:${port}`));
 });
-
-router.get('/formulario',(req,res)=>{
-    res.sendFile(path.join(__dirname + "/formulario.html"));
-});
-
-router.get('/informacion',(req,res)=>{
-    res.sendFile(path.join(__dirname + "/informacion.html"));
-});
-
-module.exports = router;
