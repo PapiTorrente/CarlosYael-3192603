@@ -87,6 +87,14 @@ input:hover {
     background-color: rgb(255, 32, 69);
 }
 
+.boton {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    width: 160px;
+    justify-content: center;
+}
+
 button {
     font-size: 18px;
     background-color: rgb(225, 62, 89);

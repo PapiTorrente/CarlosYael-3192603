@@ -52,6 +52,10 @@ app.get('/', (req, res) => {
 });
 
 //Agregar usuarios
+app.get('/agregar/', (req, res) => {
+    res.render('agregar');
+});
+
 app.post('/add', (req, res) => {
     const { nombre, ap_paterno, ap_materno, edad, oficio, correo, telefono, direccion } = req.body;
     const query = 'INSERT INTO usuarios (nombre, ap_paterno, ap_materno, edad, oficio, correo, telefono, direccion) VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
